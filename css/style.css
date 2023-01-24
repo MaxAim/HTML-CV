@@ -1,0 +1,92 @@
+body{
+    overflow-x: hidden;
+    color: darkslategray;
+    margin: 0;
+}
+
+h1, h2{
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+#mainContainer{
+    background-color: whitesmoke;
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+aside, main>div{
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    margin-bottom: 20px;
+    box-shadow: 50px;
+    padding: 50px;
+}
+
+aside{
+    background: no-repeat center -25px url("../img/pfp.jpg");
+    background-size: 100%;
+    background-color: white;
+    width: 27.25%;
+}
+
+.points{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    width: 90%;
+}
+
+#name{
+    height: 320px;
+    align-content: end;
+    display: grid;
+    color: white;
+}
+
+aside p{
+    padding: 5px;
+}
+
+main{
+    width: 65%;
+    height: fit-content;
+}
+
+.percentages{
+    color: white;
+    background-color: whitesmoke;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.percentages p{
+    background-color: lightseagreen;
+    border-radius: 10px;
+    animation: normal 5s fill;
+}
+
+footer{
+    background-color: lightseagreen;
+    color: white;
+    height: 120px;
+    text-align: center;
+}
+
+
+
+@keyframes fill {
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 90%;
+    }
+    100%{
+        width: 100%;
+    }
+}
