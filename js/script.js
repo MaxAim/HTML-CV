@@ -11,25 +11,40 @@ function load(){
     }
 }
 
-function minimize(){
-    for(let i of document.getElementsByClassName("percentages")){
-        i.children[0].classList.remove("full")
-        i.children[0].classList.add("mini");
-    }
-}
-
 function full(group){
     for(let i of document.getElementsByClassName(`colapsable ${group}`)){
-        if (i.style.maxHeight){
+        if(i.style.maxHeight){
             i.style.maxHeight = null;
             i.style.opacity = 0;
             document.getElementsByClassName(`button ${group}`)[0].style.transform = "rotate(180deg)";
-            
         } 
-        else {
+        else{
             i.style.opacity = 1;
             i.style.maxHeight = i.scrollHeight + "px";
             document.getElementsByClassName(`button ${group}`)[0].style.transform = null;
         } 
     }
 }
+
+var ns;
+
+function hide(event){
+    const navBar = document.querySelector("nav");
+    ns = event.target
+    if(event.target.tagName == "A"){
+        console.log(ns)
+    }
+    else if(navBar.style.right && event.target != navBar){
+        navBar.style.right = null;
+    }
+    else if(event.target == document.querySelector("#menu")){
+        navBar.style.right = 0;
+    }
+}
+
+function test(event){
+    console.log(event)
+}
+
+document.addEventListener("touchstart", hide);
+document.addEventListener("select", test)

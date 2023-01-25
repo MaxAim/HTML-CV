@@ -1,7 +1,23 @@
+*{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     overflow-x: hidden;
     color: darkslategray;
     margin: 0;
+}
+
+nav, #menu{
+    display: none;
 }
 
 .colapsable{
@@ -153,6 +169,47 @@ footer{
 }
 
 @media (max-width: 1024px) {
+    #menu{
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: whitesmoke;
+        background: radial-gradient(circle, rgba(235,235,235,1) 0%, rgba(255,255,255,1) 100%);
+        box-shadow: 10px 10px 15px -10px rgba(0,0,0,0.75);
+        border-radius: 10px;
+        height: 50px;
+        width: 100px;
+        border: thin black solid;
+        font-size: 2rem;
+        text-align: center;
+        padding: 15px 10px 10px 10px;
+        margin: 10px;
+    }
+    nav{
+        background-color: rgba(32, 178, 171, 0.95);
+        display: grid;
+        position: fixed;
+        height: 120%;
+        width: 66%;
+        right: -400px;
+        top: 0;
+        z-index: 10;
+        border-left: thin black solid;
+        padding-bottom: 50%;
+        transition: right 0.5s ease-out;
+    }
+    nav div{
+        display: grid;
+        height: 40%;
+        margin: 40px;
+    }
+    a{
+        font-size: 1rem;
+        color: whitesmoke;
+        text-decoration: none;
+        padding-top: 12px;
+    }
     aside{
         width: 100%;
     }
