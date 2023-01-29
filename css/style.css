@@ -14,6 +14,8 @@ body{
     overflow-x: hidden;
     color: darkslategray;
     margin: 0;
+    background-color: whitesmoke;
+    display: grid;
 }
 
 nav, #menu{
@@ -33,6 +35,23 @@ h1, h2{
 
 h1{
     padding: 40% 0 20px 20px;
+}
+
+h3{
+    padding-top: 50px;
+}
+
+#summary h2, #education h2, #work h2{
+    margin-bottom: -50px;
+}
+
+#summary{
+    padding-bottom: 30px;
+}
+
+i{
+    padding-right: 5px;
+    color: lightseagreen;
 }
 
 button{
@@ -65,6 +84,8 @@ button{
     justify-content: space-around;
     column-gap: 20px;
     padding: 20px 20px 0 20px;
+    max-width: 1400px;
+    justify-self: center;
 }
 
 aside, main>div{
@@ -78,7 +99,7 @@ aside, main>div{
 }
 
 aside{
-    width: 27.25%;
+    width: 50%;
     padding: 0 0 20px 0;
     height: fit-content;
 }
@@ -91,6 +112,11 @@ aside{
     margin: 25px;
     padding: 25px;
     border-top: 1px solid rgba(128, 128, 128, 0.5);
+    padding: 20px 0 0 20px;
+}
+
+.skills:last-of-type{
+    padding-bottom: 40px;
 }
 
 main p:nth-of-type(even){
@@ -108,6 +134,7 @@ main div div:last-of-type p{
     justify-content: space-around;
     font-size: 1.2rem;
     width: 90%;
+    padding: 20px 0 0 30px;
 }
 
 #name{
@@ -155,17 +182,8 @@ footer{
     justify-content: center;
 }
 
-@media (max-width: 1400px) {
-    aside{
-        width: 50%;
-    }
-    .points{
-        display: block;
-        padding: 20px 0 0 30px;
-    }
-    .skills{
-        padding: 30px;
-    }
+footer i{
+    color: white;
 }
 
 @media (max-width: 1024px) {
@@ -190,28 +208,47 @@ footer{
         background-color: rgba(32, 178, 171, 0.95);
         display: grid;
         position: fixed;
-        height: 120%;
+        height: 90vh;
         width: 66%;
-        right: -400px;
+        max-width: 350px;
+        right: -100%;
         top: 0;
         z-index: 10;
         border-left: thin black solid;
         padding-bottom: 50%;
         transition: right 0.5s ease-out;
+        align-content: space-between;
     }
     nav div{
         display: grid;
         height: 40%;
-        margin: 40px;
+        margin-top: 40px;
     }
     a{
         font-size: 1rem;
         color: whitesmoke;
         text-decoration: none;
         padding-top: 12px;
+        padding-left: 50px;
+    }
+    nav i{
+        color: white;
+    }
+    #social{
+        display: flex;
+        position: absolute;
+        top: 85vh;
+        width: 100%;
+        justify-content: center;
+    }
+    #social a{
+        padding: 0;
     }
     aside{
         width: 100%;
+    }
+    #work div, #education div{
+        padding: 0;
     }
     .points{
         width: 100%;

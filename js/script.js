@@ -26,18 +26,16 @@ function full(group){
     }
 }
 
-var ns;
-
 function hide(event){
     const navBar = document.querySelector("nav");
-    ns = event.target
-    if(event.target.tagName == "A"){
-        console.log(ns)
-    }
+    const body = document.querySelector("body");
+    if(event.target.tagName == "A") return;
     else if(navBar.style.right && event.target != navBar){
         navBar.style.right = null;
+        body.style.overflowY = "scroll";
     }
     else if(event.target == document.querySelector("#menu")){
+        body.style.overflowY = "hidden";
         navBar.style.right = 0;
     }
 }

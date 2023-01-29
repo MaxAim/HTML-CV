@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/cc0fb5330a.js" crossorigin="anonymous"></script>
     <title>CV</title>
 </head>
 <body onload="load()">
@@ -19,6 +20,13 @@
                 <a href="#work">Work Experience</a>
                 <a href="#education">Education</a>
             </div>
+            <div id="social">
+                <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a href="www.snapchat.com"><i class="fa-brands fa-snapchat"></i></a>
+                <a href="www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+                <a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
             <div>
                 
             </div>
@@ -29,16 +37,16 @@
             </div>
             <div class="points">
                 <div>
-                    <p>◉ Designer</p>
-                    <p>◉ London, UK</p>
+                    <p><i class="fa-solid fa-briefcase"></i> Designer</p>
+                    <p><i class="fa-solid fa-house"></i> London, UK</p>
                 </div>
                 <div>
-                    <p>◉ ex@mail.com</p>
-                    <p>◉ 1224435534</p>
+                    <p><i class="fa-solid fa-envelope"></i> ex@mail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 1224435534</p>
                 </div>
             </div>
             <div id="skills" class="skills">
-                <h2>◉ Skills</h2>
+                <h2><i class="fa-solid fa-asterisk"></i> Skills</h2>
                 <p>Adove Photoshop</p>
                 <div class="percentages"><p class="colapsable aside">90%</p></div>
                 <p>Photography</p>
@@ -47,66 +55,65 @@
                 <div class="percentages"><p class="colapsable aside">75%</p></div>
             </div>
             <div class="skills">
-                <h2>◉ Languages</h2>
+                <h2><i class="fa-solid fa-globe"></i> Languages</h2>
                 <p>English</p>
                 <div class="percentages"><p class="colapsable aside">100%</p></div>
                 <p>Spanish</p>
                 <div class="percentages"><p class="colapsable aside">60%</p></div>
                 <p>German</p>
                 <div class="percentages"><p class="colapsable aside">30%</p></div>
-                <button onclick="full('aside')"><div class="button aside">▲</div></button>
+                <button title="Expand" onclick="full('aside')"><div class="button aside">▲</div></button>
             </div>
         </aside>
         <main>
             <div id="summary">
-                <h2>◉ Key Summary</h2>
+                <h2><i class="fa-solid fa-certificate"></i> Key Summary</h2>
                 <h3>Personalize text</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque velit necessitatibus in rerum eos inventore, maxime, ducimus, nostrum nesciunt excepturi modi sint veritatis. Delectus iste dolores quod culpa quasi neque!</p>
             </div>
             <div id="work">
-                <h2>◉ Work Experience</h2>
+                <h2><i class="fa-solid fa-suitcase"></i> Work Experience</h2>
                 <div>
                     <h3>Front End Developer / w3schools.com</h3>
-                    <p class="colapsable work">Jan 2015 - <b>Current</b></p>
+                    <p class="colapsable work"><i class="fa-solid fa-calendar-days"></i> Jan 2015 - <b>Current</b></p>
                     <p class="colapsable work">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptatum quis, ab omnis excepturi quidem ea autem libero possimus repellendus rem, eaque dolor porro maiores expedita fugiat nobis beatae laborum.</p>
                 </div>
                 <div>
                     <h3>Web Developer / something.com</h3>
-                    <p class="colapsable work">Jan 2015 - <b>Current</b></p>
+                    <p class="colapsable work"><i class="fa-solid fa-calendar-days"></i> Jan 2015 - <b>Current</b></p>
                     <p class="colapsable work">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus reiciendis laudantium vel nobis molestias assumenda itaque quod possimus id, incidunt, sunt nam aut nulla sit corporis delectus modi maxime.</p>
                 </div>
-                <button onclick="full('work')"><div class="button work">▲</div></button>
+                <button title="Expand" onclick="full('work')"><div class="button work">▲</div></button>
             </div>
             <div id="education">
-                <h2>◉ Education</h2>
+                <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
                 <div>
                     <h3>W3Schools.com</h3>
-                    <p class="colapsable education">Forever</p>
+                    <p class="colapsable education"><i class="fa-solid fa-calendar-days"></i> Forever</p>
                     <p class="colapsable education">Web Development! All I need to know in one place</p>
                 </div>
                 <div>
                     <h3>London Business School</h3>
-                    <p class="colapsable education">2013 - 2015</p>
+                    <p class="colapsable education"><i class="fa-solid fa-calendar-days"></i> 2013 - 2015</p>
                     <p class="colapsable education">Master Degree</p>
                 </div>
                 <div>
                     <h3>School of Coding</h3>
-                    <p class="colapsable education">2010 - 2013</p>
+                    <p class="colapsable education"><i class="fa-solid fa-calendar-days"></i> 2010 - 2013</p>
                     <p class="colapsable education">Web Development! All I need to know in one place</p>
                 </div>
-                <button onclick="full('education')"><div class="button education">▲</div></button>
+                <button title="Expand" onclick="full('education')"><div class="button education">▲</div></button>
             </div>
         </main>
     </div>
     <footer>
         <p>Find me on social media.</p>
         <div>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+            <a href="www.snapchat.com"><i class="fa-brands fa-snapchat"></i></a>
+            <a href="www.pinterest.com"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+            <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
         </div>
         <p>Powered by w3.css</p>
     </footer>
