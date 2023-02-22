@@ -12,7 +12,33 @@ function load(){
     for(let i of document.getElementsByClassName("colapsable")){
         i.style.maxHeight = i.scrollHeight + "px";
     }
+    document.querySelector("body").style.opacity = 1;
+    document.querySelector("html").style.background = "none";
     loaded = true;
+}
+
+function getData() {
+    fetch('../json/info.json')
+    .then(res => res.json())
+    .then(data => {
+        for(let i in data) {
+            try {
+                let element = document.getElementById(i + "Text");
+                element.innerHTML += data[i];
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        var toLoad = document.getElementsByClassName("toLoad");
+        var n = 0;
+        while(toLoad[n] != undefined){
+            if(!toLoad[n].textContent || toLoad[n].textContent == " "){
+                toLoad[n].innerHTML += "Error"
+            }
+            n++
+        }
+        load();
+    })
 }
 
 function full(group){
@@ -28,11 +54,6 @@ function full(group){
             i.style.opacity = 1;
             i.style.maxHeight = i.scrollHeight + "px";
             document.getElementsByClassName(`button ${group}`)[0].style.transform = null;
-            if (group == "aside") {                
-                setTimeout(() => {
-                    load();
-                }, 0);
-            }
         } 
     }
 }
@@ -52,4 +73,3 @@ function hide(event){
 }
 
 document.addEventListener("touchstart", hide);
-document.addEventListener("select", test)

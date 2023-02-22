@@ -9,6 +9,8 @@
 html{
     font-family: "Roboto", sans-serif;
     scroll-behavior: smooth;
+    background: no-repeat center 33vh url("../img/loading.gif");
+
 }
 
 body{
@@ -18,6 +20,8 @@ body{
     background-color: whitesmoke;
     display: grid;
     overflow-anchor: none;
+    opacity: 0;
+    transition: opacity 1s ease-in;
 }
 
 nav, #menu{
@@ -159,6 +163,7 @@ main div div:last-of-type p{
     color: white;
     background: no-repeat center center url("../img/pfp2.jpg");
     background-size: 120%;
+    text-shadow: 1px 1px 2px darkslategray;
 }
 
 aside p{
@@ -192,14 +197,13 @@ main{
 footer{
     background-color: lightseagreen;
     color: white;
-    height: 120px;
+    height: 100px;
     text-align: center;
-    display: grid;
-    justify-content: center;
 }
 
 footer i{
     color: white;
+    margin-top: -10px;
 }
 
 #work div:last-of-type p:last-of-type, #education div:last-of-type p:last-of-type{

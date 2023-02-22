@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/cc0fb5330a.js" crossorigin="anonymous"></script>
     <title>CV</title>
 </head>
-<body onload="load()">
+<body onload="getData()">
     <div id="mainContainer">
         <butto id="menu">三</butto>
         <nav>
@@ -31,81 +31,81 @@
         <aside>
             <div id="name">
                 <img src="img/pfp.jpg" alt="Profile pic">
-                <h1>Jane Doe</h1>
+                <h1 id="nameText" class="toLoad"></h1>
             </div>
             <div class="points">
                 <div>
-                    <p><i class="fa-solid fa-briefcase"></i> Designer</p>
-                    <p><i class="fa-solid fa-house"></i> London, UK</p>
+                    <p id="titleText" class="toLoad"><i class="fa-solid fa-briefcase"></i> </p>
+                    <p id="locationText" class="toLoad"><i class="fa-solid fa-house"></i> </p>
                 </div>
                 <div>
-                    <p><i class="fa-solid fa-envelope"></i> ex@mail.com</p>
-                    <p><i class="fa-solid fa-phone"></i> 1224435534</p>
+                    <p  id="mailText" class="toLoad"><i class="fa-solid fa-envelope"></i> </p>
+                    <p  id="phoneText" class="toLoad"><i class="fa-solid fa-phone"></i> </p>
                 </div>
             </div>
             <div id="skills" class="skills">
-                <h2><i class="fa-solid fa-asterisk"></i> Skills</h2>
-                <p>Adove Photoshop</p>
-                <div class="percentages"><p class="colapsable aside">90%</p></div>
-                <p>Photography</p>
-                <div class="percentages"><p class="colapsable aside">80%</p></div>
-                <p>Illustrator</p>
-                <div class="percentages"><p class="colapsable aside">75%</p></div>
+                <h2><i class="fa-solid fa-asterisk"></i> Habilidades</h2>
+                <p id="skill1Text" class="toLoad"></p>
+                <div class="percentages"><p id="skill1perText" class="colapsable aside toLoad"></p></div>
+                <p id="skill2Text" class="toLoad"></p>
+                <div class="percentages"><p id="skill2perText" class="colapsable aside toLoad"></p></div>
+                <p id="skill3Text" class="toLoad"></p>
+                <div class="percentages"><p id="skill3perText" class="colapsable aside toLoad"></p></div>
             </div>
             <div class="skills">
-                <h2><i class="fa-solid fa-globe"></i> Languages</h2>
-                <p>English</p>
-                <div class="percentages"><p class="colapsable aside">100%</p></div>
-                <p>Spanish</p>
-                <div class="percentages"><p class="colapsable aside">60%</p></div>
-                <p>German</p>
-                <div class="percentages"><p class="colapsable aside">30%</p></div>
+                <h2><i class="fa-solid fa-globe"></i> Lenguajes</h2>
+                <p id="language1Text" class="toLoad"></p>
+                <div class="percentages"><p id="language1perText"  class="colapsable aside toLoad"></p></div>
+                <p id="language2Text" class="toLoad"></p>
+                <div class="percentages"><p id="language2perText"  class="colapsable aside toLoad"></p></div>
+                <p id="language3Text" class="toLoad"></p>
+                <div class="percentages"><p id="language3perText" class="colapsable aside"></p></div>
                 <button title="Expand" onclick="full('aside')"><div class="button aside">▲</div></button>
             </div>
         </aside>
         <main>
             <div id="summary">
-                <h2><i class="fa-solid fa-certificate"></i> Key Summary</h2>
-                <h3>Personalize text</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque velit necessitatibus in rerum eos inventore, maxime, ducimus, nostrum nesciunt excepturi modi sint veritatis. Delectus iste dolores quod culpa quasi neque!</p>
+                <h2><i class="fa-solid fa-certificate"></i> Resumen</h2>
+                <h3 id="summaryTitleText" class="toLoad"></h3>
+                <p id="summaryText" class="toLoad"></p>
             </div>
             <div id="work">
-                <h2><i class="fa-solid fa-suitcase"></i> Work Experience</h2>
+                <h2><i class="fa-solid fa-suitcase"></i> Experiencia Laboral</h2>
                 <div>
-                    <h3>Front End Developer / w3schools.com</h3>
-                    <p class="colapsable work"><i class="fa-solid fa-calendar-days"></i> Jan 2015 - <b>Current</b></p>
-                    <p class="colapsable work">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptatum quis, ab omnis excepturi quidem ea autem libero possimus repellendus rem, eaque dolor porro maiores expedita fugiat nobis beatae laborum.</p>
+                    <h3 id="workExperience1Text" class="toLoad"></h3>
+                    <p id="workExperience1dateText" class="colapsable work toLoad"><i class="fa-solid fa-calendar-days"></i> </p>
+                    <p id="workExperience1exText" class="colapsable work toLoad"></p>
                 </div>
                 <div>
-                    <h3>Web Developer / something.com</h3>
-                    <p class="colapsable work"><i class="fa-solid fa-calendar-days"></i> Jan 2015 - <b>Current</b></p>
-                    <p class="colapsable work">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ducimus reiciendis laudantium vel nobis molestias assumenda itaque quod possimus id, incidunt, sunt nam aut nulla sit corporis delectus modi maxime.</p>
+                    <h3 id="workExperience2Text" class="toLoad"></h3>
+                    <p id="workExperience2dateText" class="colapsable work toLoad"><i class="fa-solid fa-calendar-days"></i> </p>
+                    <p id="workExperience2exText" class="colapsable work toLoad"></p>
                 </div>
                 <button title="Expand" onclick="full('work')"><div class="button work">▲</div></button>
             </div>
             <div id="education">
-                <h2><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+                <h2><i class="fa-solid fa-graduation-cap"></i> Educación</h2>
                 <div>
-                    <h3>W3Schools.com</h3>
-                    <p class="colapsable education"><i class="fa-solid fa-calendar-days"></i> Forever</p>
-                    <p class="colapsable education">Web Development! All I need to know in one place</p>
+                    <h3 id="education1Text" class="toLoad"></h3>
+                    <p id="education1dateText" class="colapsable education toLoad"><i class="fa-solid fa-calendar-days"></i> </p>
+                    <p id="education1exText" class="colapsable education toLoad"></p>
                 </div>
                 <div>
-                    <h3>London Business School</h3>
-                    <p class="colapsable education"><i class="fa-solid fa-calendar-days"></i> 2013 - 2015</p>
-                    <p class="colapsable education">Master Degree</p>
+                    <h3 id="education2Text" class="toLoad"></h3>
+                    <p id="education2dateText" class="colapsable education toLoad"><i class="fa-solid fa-calendar-days"></i> </p>
+                    <p id="education2exText" class="colapsable education toLoad"></p>
                 </div>
                 <div>
-                    <h3>School of Coding</h3>
-                    <p class="colapsable education"><i class="fa-solid fa-calendar-days"></i> 2010 - 2013</p>
-                    <p class="colapsable education">Web Development! All I need to know in one place</p>
+                    <h3 id="education3Text" class="toLoad"></h3>
+                    <p id="education3dateText" class="colapsable education toLoad"><i class="fa-solid fa-calendar-days"></i> </p>
+                    <p id="education3exText" class="colapsable education toLoad"></p>
                 </div>
                 <button title="Expand" onclick="full('education')"><div class="button education">▲</div></button>
             </div>
         </main>
     </div>
     <footer>
-        <p>Find me on social media.</p>
+        <p>Mis Redes</p>
         <div>
             <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
             <a href="www.snapchat.com"><i class="fa-brands fa-snapchat"></i></a>
@@ -113,7 +113,6 @@
             <a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
             <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
         </div>
-        <p>Powered by w3.css</p>
     </footer>
 </body>
 </html>
