@@ -20,7 +20,7 @@ function load(){
 //Carga la informacion del CV desde un JSON y llama la funcion load
 
 function getData() {
-    fetch('../json/info.json')
+    fetch('https://maxaim.github.io/HTML-CV/json/info.json')
     .then(res => res.json())
     .then(data => {
         for(let i in data) {
