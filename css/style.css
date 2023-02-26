@@ -210,6 +210,10 @@ footer i{
     padding-bottom: 50px;
 }
 
+/*
+Cambia la foto de perfil
+*/
+
 @keyframes change{
     0%{
         opacity: 1;
@@ -221,6 +225,11 @@ footer i{
         opacity: 1;
     }
 }
+
+/*
+Da una leve sacudida a los items cuando el mouse
+les pasa por arriba
+*/
 
 @keyframes rotate {
     0%{

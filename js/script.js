@@ -1,4 +1,6 @@
-var loaded = false;
+//Causa la animacion de porcentajes cargando, elimina la imagen de cargado
+//y cambia la opacidad del resto de la pagina para hacerla visible al
+//completar el cargado de la pagina
 
 function load(){
     const percentages = document.getElementsByClassName("percentages");
@@ -8,14 +10,14 @@ function load(){
             setTimeout(() => { element.children[0].innerHTML = `${i}%`, element.children[0].style.maxWidth = element.children[0].innerHTML}, i * i / 4);
         }
     };
-    if(loaded == true) return;
     for(let i of document.getElementsByClassName("colapsable")){
         i.style.maxHeight = i.scrollHeight + "px";
     }
     document.querySelector("body").style.opacity = 1;
     document.querySelector("html").style.background = "none";
-    loaded = true;
 }
+
+//Carga la informacion del CV desde un JSON y llama la funcion load
 
 function getData() {
     fetch('../json/info.json')
@@ -41,6 +43,8 @@ function getData() {
     })
 }
 
+//Esconde y revela los objetos ocultables
+
 function full(group){
     for(let i of document.getElementsByClassName(`colapsable ${group}`)){
         if(i.style.maxHeight){
@@ -57,6 +61,9 @@ function full(group){
         } 
     }
 }
+
+
+//Revela y esconde la barra de navegacion en modo mobile
 
 function hide(event){
     const navBar = document.querySelector("nav");
